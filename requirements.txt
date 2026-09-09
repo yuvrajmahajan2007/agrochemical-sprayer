@@ -7,6 +7,7 @@ numpy>=1.24.0
 Pillow>=10.0.0       # image loading / saving / overlay rendering
 Flask>=2.3.0         # backend web server
 Flask-CORS>=4.0.0    # allow mobile phone cross-origin requests
+gunicorn>=21.2.0     # production WSGI server (Render start command)
 matplotlib>=3.7.0    # evaluation reports / confusion matrices
 scikit-learn>=1.3.0  # train/val/test splits, metrics
 requests>=2.31.0     # backend / dataset helpers
