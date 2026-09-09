@@ -1,0 +1,346 @@
+{
+  "project": "AI-Driven Precision Agrochemical Sprayer",
+  "architecture": "MobileNetV2 transfer learning (real binary model)",
+  "classes": [
+    "Non_Plant",
+    "Plant_Leaf"
+  ],
+  "class_0": "Non_Plant",
+  "class_1": "Plant_Leaf",
+  "n_plant_leaf_images": 7735,
+  "n_non_plant_images": 245,
+  "split": {
+    "train": 5586,
+    "val": 1197,
+    "test": 1197
+  },
+  "train_accuracy": 0.9979,
+  "val_accuracy": 0.9958,
+  "test_accuracy": 0.9992,
+  "test_loss": 0.005,
+  "test_precision": 0.9991,
+  "test_recall": 1.0,
+  "test_f1": 0.9996,
+  "confusion_matrix": [
+    [
+      36,
+      1
+    ],
+    [
+      0,
+      1160
+    ]
+  ],
+  "operating_threshold_pct": 70.0,
+  "augmentation": "crop/pad zoom+shift, rot90, flip, brightness\u00b120%, contrast 0.8-1.2, mild blur 20%",
+  "evaluation": {
+    "recommended_threshold_pct": 50,
+    "test_images": 1197,
+    "test_accuracy": 0.9992,
+    "test_precision": 0.9991,
+    "test_recall_plant": 1.0,
+    "test_fpr_non_plant_to_plant": 0.027,
+    "test_balanced_accuracy": 0.9865,
+    "sweep": [
+      {
+        "threshold": 50,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 51,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 52,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 53,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 54,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 55,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 56,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 57,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 58,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 59,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 60,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 61,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 62,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 63,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 64,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 65,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 66,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 67,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 68,
+        "accuracy": 0.9992,
+        "precision": 0.9991,
+        "recall_plant": 1.0,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9865
+      },
+      {
+        "threshold": 69,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 70,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 71,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 72,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 73,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 74,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 75,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 76,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 77,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 78,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 79,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 80,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 81,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 82,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 83,
+        "accuracy": 0.9983,
+        "precision": 0.9991,
+        "recall_plant": 0.9991,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9861
+      },
+      {
+        "threshold": 84,
+        "accuracy": 0.9975,
+        "precision": 0.9991,
+        "recall_plant": 0.9983,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9856
+      },
+      {
+        "threshold": 85,
+        "accuracy": 0.9975,
+        "precision": 0.9991,
+        "recall_plant": 0.9983,
+        "fpr_non_plant": 0.027,
+        "balanced_acc": 0.9856
+      }
+    ],
+    "confusion_matrix": [
+      [
+        36,
+        1
+      ],
+      [
+        0,
+        1160
+      ]
+    ]
+  },
+  "deployed_threshold_source": "backend CONFIG.SPRAYBOT_PLANT_THRESHOLD (default 70). Eval showed equal FPR down to 50%, so 70 was kept - no blind lowering."
+}

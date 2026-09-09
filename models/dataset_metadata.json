@@ -1,0 +1,388 @@
+﻿{
+  "project": "AI-Driven Precision Agrochemical Sprayer",
+  "architecture": "Single multi-class MobileNetV2 (transfer learning)",
+  "image_size": 224,
+  "num_classes": 41,
+  "crops": [
+    "Apple",
+    "Blueberry",
+    "Cherry",
+    "Grape",
+    "Maize",
+    "Orange",
+    "Peach",
+    "Pepper",
+    "Potato",
+    "Raspberry",
+    "Rice",
+    "Soybean",
+    "Squash",
+    "Strawberry",
+    "Tomato"
+  ],
+  "num_crops": 15,
+  "crop_class_counts": {
+    "Apple": 4,
+    "Blueberry": 1,
+    "Cherry": 2,
+    "Maize": 4,
+    "Grape": 4,
+    "Orange": 1,
+    "Peach": 2,
+    "Pepper": 2,
+    "Potato": 3,
+    "Raspberry": 1,
+    "Soybean": 1,
+    "Squash": 1,
+    "Strawberry": 2,
+    "Tomato": 10,
+    "Rice": 3
+  },
+  "classes": [
+    {
+      "folder": "Apple_apple_scab",
+      "crop": "Apple",
+      "class_key": "apple scab",
+      "display_name": "Apple Scab",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Apple_black_rot",
+      "crop": "Apple",
+      "class_key": "black rot",
+      "display_name": "Black Rot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Apple_cedar_apple_rust",
+      "crop": "Apple",
+      "class_key": "cedar apple rust",
+      "display_name": "Cedar Apple Rust",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Apple_healthy",
+      "crop": "Apple",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Blueberry_healthy",
+      "crop": "Blueberry",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Cherry_powdery_mildew",
+      "crop": "Cherry",
+      "class_key": "powdery mildew",
+      "display_name": "Powdery Mildew",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Cherry_healthy",
+      "crop": "Cherry",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Maize_cercospora_leaf_spot_gray_leaf_spot",
+      "crop": "Maize",
+      "class_key": "cercospora leaf spot gray leaf spot",
+      "display_name": "Cercospora Leaf Spot Gray Leaf Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Maize_common_rust",
+      "crop": "Maize",
+      "class_key": "common rust",
+      "display_name": "Common Rust",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Maize_northern_leaf_blight",
+      "crop": "Maize",
+      "class_key": "northern leaf blight",
+      "display_name": "Northern Leaf Blight",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Maize_healthy",
+      "crop": "Maize",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Grape_black_rot",
+      "crop": "Grape",
+      "class_key": "black rot",
+      "display_name": "Black Rot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Grape_esca_black_measles",
+      "crop": "Grape",
+      "class_key": "esca black measles",
+      "display_name": "Esca Black Measles",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Grape_leaf_blight_isariopsis_leaf_spot",
+      "crop": "Grape",
+      "class_key": "leaf blight isariopsis leaf spot",
+      "display_name": "Leaf Blight Isariopsis Leaf Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Grape_healthy",
+      "crop": "Grape",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Orange_haunglongbing_citrus_greening",
+      "crop": "Orange",
+      "class_key": "haunglongbing citrus greening",
+      "display_name": "Haunglongbing Citrus Greening",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Peach_bacterial_spot",
+      "crop": "Peach",
+      "class_key": "bacterial spot",
+      "display_name": "Bacterial Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Peach_healthy",
+      "crop": "Peach",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Pepper_bacterial_spot",
+      "crop": "Pepper",
+      "class_key": "bacterial spot",
+      "display_name": "Bacterial Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Pepper_healthy",
+      "crop": "Pepper",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Potato_early_blight",
+      "crop": "Potato",
+      "class_key": "early blight",
+      "display_name": "Early Blight",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Potato_late_blight",
+      "crop": "Potato",
+      "class_key": "late blight",
+      "display_name": "Late Blight",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Potato_healthy",
+      "crop": "Potato",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Raspberry_healthy",
+      "crop": "Raspberry",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Soybean_healthy",
+      "crop": "Soybean",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Squash_powdery_mildew",
+      "crop": "Squash",
+      "class_key": "powdery mildew",
+      "display_name": "Powdery Mildew",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Strawberry_leaf_scorch",
+      "crop": "Strawberry",
+      "class_key": "leaf scorch",
+      "display_name": "Leaf Scorch",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Strawberry_healthy",
+      "crop": "Strawberry",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_bacterial_spot",
+      "crop": "Tomato",
+      "class_key": "bacterial spot",
+      "display_name": "Bacterial Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_early_blight",
+      "crop": "Tomato",
+      "class_key": "early blight",
+      "display_name": "Early Blight",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_late_blight",
+      "crop": "Tomato",
+      "class_key": "late blight",
+      "display_name": "Late Blight",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_leaf_mold",
+      "crop": "Tomato",
+      "class_key": "leaf mold",
+      "display_name": "Leaf Mold",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_septoria_leaf_spot",
+      "crop": "Tomato",
+      "class_key": "septoria leaf spot",
+      "display_name": "Septoria Leaf Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_spider_mites_two_spotted_spider_mite",
+      "crop": "Tomato",
+      "class_key": "spider mites two spotted spider mite",
+      "display_name": "Spider Mites Two Spotted Spider Mite",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_target_spot",
+      "crop": "Tomato",
+      "class_key": "target spot",
+      "display_name": "Target Spot",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_tomato_yellow_leaf_curl_virus",
+      "crop": "Tomato",
+      "class_key": "tomato yellow leaf curl virus",
+      "display_name": "Tomato Yellow Leaf Curl Virus",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_tomato_mosaic_virus",
+      "crop": "Tomato",
+      "class_key": "tomato mosaic virus",
+      "display_name": "Tomato Mosaic Virus",
+      "status": "Diseased",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Tomato_healthy",
+      "crop": "Tomato",
+      "class_key": "healthy",
+      "display_name": "Healthy",
+      "status": "Healthy",
+      "source": "PlantVillage"
+    },
+    {
+      "folder": "Rice_bacterial_leaf_blight",
+      "crop": "Rice",
+      "class_key": "bacterial_leaf_blight",
+      "display_name": "Bacterial Leaf Blight",
+      "status": "Diseased",
+      "source": "Rice"
+    },
+    {
+      "folder": "Rice_brown_spot",
+      "crop": "Rice",
+      "class_key": "brown_spot",
+      "display_name": "Brown Spot",
+      "status": "Diseased",
+      "source": "Rice"
+    },
+    {
+      "folder": "Rice_leaf_smut",
+      "crop": "Rice",
+      "class_key": "leaf_smut",
+      "display_name": "Leaf Smut",
+      "status": "Diseased",
+      "source": "Rice"
+    }
+  ],
+  "datasets_used": {
+    "output_dir": "C:\\Users\\yuvra\\agrochemical sprayer\\datasets\\processed",
+    "sources": {
+      "PlantVillage": {
+        "origin": "PlantVillage dataset (via Kaggle: abdallahalidev/plantvillage-dataset, emmarex/plantdisease)",
+        "license": "CC0 / research use - PlantVillage public dataset",
+        "note": "Standardized 38-class PlantVillage multicrop subset"
+      },
+      "Rice": {
+        "origin": "Rice leaf disease dataset (CDS Capstone / UCI Rice Leaf Diseases)",
+        "license": "Academic research dataset",
+        "note": "3 disease classes - no healthy class available"
+      }
+    },
+    "prepared_at": "2026-09-08 19:23:02"
+  },
+  "test_split_file": "test_split.json"
+}

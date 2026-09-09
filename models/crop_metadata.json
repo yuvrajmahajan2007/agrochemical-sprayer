@@ -1,0 +1,148 @@
+{
+  "Apple": {
+    "diseases": [
+      "Apple Scab",
+      "Black Rot",
+      "Cedar Apple Rust"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Blueberry": {
+    "diseases": [],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Cherry": {
+    "diseases": [
+      "Powdery Mildew"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Grape": {
+    "diseases": [
+      "Black Rot",
+      "Esca Black Measles",
+      "Leaf Blight Isariopsis Leaf Spot"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Maize": {
+    "diseases": [
+      "Cercospora Leaf Spot Gray Leaf Spot",
+      "Common Rust",
+      "Northern Leaf Blight"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Orange": {
+    "diseases": [
+      "Haunglongbing Citrus Greening"
+    ],
+    "healthy": false,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Peach": {
+    "diseases": [
+      "Bacterial Spot"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Pepper": {
+    "diseases": [
+      "Bacterial Spot"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Potato": {
+    "diseases": [
+      "Early Blight",
+      "Late Blight"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Raspberry": {
+    "diseases": [],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Rice": {
+    "diseases": [
+      "Bacterial Leaf Blight",
+      "Brown Spot",
+      "Leaf Smut"
+    ],
+    "healthy": false,
+    "sources": [
+      "Rice"
+    ]
+  },
+  "Soybean": {
+    "diseases": [],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Squash": {
+    "diseases": [
+      "Powdery Mildew"
+    ],
+    "healthy": false,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Strawberry": {
+    "diseases": [
+      "Leaf Scorch"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  },
+  "Tomato": {
+    "diseases": [
+      "Bacterial Spot",
+      "Early Blight",
+      "Late Blight",
+      "Leaf Mold",
+      "Septoria Leaf Spot",
+      "Spider Mites Two Spotted Spider Mite",
+      "Target Spot",
+      "Tomato Mosaic Virus",
+      "Tomato Yellow Leaf Curl Virus"
+    ],
+    "healthy": true,
+    "sources": [
+      "PlantVillage"
+    ]
+  }
+}

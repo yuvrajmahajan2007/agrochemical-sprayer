@@ -1,0 +1,8 @@
+{
+  "keras_model": "C:\\Users\\yuvra\\agrochemical sprayer\\models\\plant_disease_model.keras",
+  "tflite_model": "C:\\Users\\yuvra\\agrochemical sprayer\\models\\plant_disease_model.tflite",
+  "tflite_size_bytes": 2887280,
+  "tflite_size_mb": 2.75,
+  "keras_size_mb": 23.82,
+  "esp32_note": "The ESP32/CAM typically has ~320 KB SRAM usable by TensorFlow Lite for Microcontrollers. A multi-crop foliar MobileNetV2-derived model (tens of MB) cannot fit on-device. Recommended architecture: ESP32-CAM captures and streams JPEG over Wi-Fi to the Flask server, which runs the REAL inference and returns the result. On-device inference is not claimed."
+}

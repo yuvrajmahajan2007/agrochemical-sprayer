@@ -1,0 +1,28 @@
+{
+  "project": "AI-Driven Precision Agrochemical Sprayer",
+  "architecture": "MobileNetV2 transfer learning (frozen + fine-tune)",
+  "num_crops": 15,
+  "crops": [
+    "Apple",
+    "Blueberry",
+    "Cherry",
+    "Grape",
+    "Maize",
+    "Orange",
+    "Peach",
+    "Pepper",
+    "Potato",
+    "Raspberry",
+    "Rice",
+    "Soybean",
+    "Squash",
+    "Strawberry",
+    "Tomato"
+  ],
+  "train_images": 5538,
+  "val_images": 982,
+  "test_images": 1151,
+  "test_accuracy": 0.9878,
+  "training_seconds": 4202.3,
+  "note": "Held-out test images excluded from training/validation."
+}

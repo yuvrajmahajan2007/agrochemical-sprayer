@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1e7e34">
+  <title>AI-Driven Precision Agrochemical Sprayer - Login</title>
+  <link rel="stylesheet" href="css/style.css?v=7\">
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="auth-brand">
+      <div class="big-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+      <h1 data-i18n="app_name">AI-Driven Precision Agrochemical Sprayer</h1>
+    </div>
+
+    <div class="split-label">
+      <div id="tab-login" class="tab active" onclick="switchMode('login')" data-i18n="login">Login</div>
+      <div id="tab-register" class="tab" onclick="switchMode('register')" data-i18n="register">Register</div>
+    </div>
+
+    <!-- Register fields (hidden on login mode) -->
+    <div class="input-group" id="group-name">
+      <label data-i18n="farmer_name">Farmer Name</label>
+      <input type="text" id="reg-name" data-i18n-placeholder="farmer_name" autocomplete="name">
+      <div class="err-msg" id="err-name"></div>
+    </div>
+
+    <div class="input-group">
+      <label data-i18n="mobile_number">Mobile Number</label>
+      <input type="tel" id="auth-mobile" inputmode="numeric" pattern="[0-9]*" maxlength="10" data-i18n-placeholder="mobile_placeholder" autocomplete="tel">
+      <div class="err-msg" id="err-mobile"></div>
+    </div>
+
+    <div class="input-group">
+      <label data-i18n="password">Password</label>
+      <div class="pw-wrap">
+        <input type="password" id="auth-password" data-i18n-placeholder="password" autocomplete="current-password">
+        <button class="eye" id="toggle-pw" tabindex="-1" type="button" aria-label="Show password"><span class="eye-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="eye-off-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg></span></button>
+      </div>
+      <div class="err-msg" id="err-password"></div>
+    </div>
+
+    <div class="row" style="align-items:center;margin-bottom:14px;">
+      <label style="display:flex;align-items:center;gap:8px;font-size:0.9rem;">
+        <input type="checkbox" id="remember" checked> <span data-i18n="remember_me">Remember Me</span>
+      </label>
+    </div>
+
+    <button id="btn-submit" class="btn btn-primary" onclick="doAuth()" data-i18n="login">Login</button>
+
+    <p class="center" style="margin-top:16px;">
+      <a href="#" id="link-switch" onclick="switchMode2(); return false;"></a>
+    </p>
+  </div>
+
+  <script src="js/language.js?v=7"></script>
+  <script src="js/auth.js?v=7"></script>
+  <script>
+    let mode = "login";
+
+    function switchMode(m) {
+      mode = m;
+      const isLogin = m === "login";
+      document.getElementById("tab-login").classList.toggle("active", isLogin);
+      document.getElementById("tab-register").classList.toggle("active", !isLogin);
+      document.getElementById("group-name").style.display = isLogin ? "none" : "block";
+      clearErrors();
+      document.getElementById("btn-submit").textContent = Lang.key(isLogin ? "login" : "register");
+      document.getElementById("link-switch").textContent = Lang.key(isLogin ? "no_account" : "already_account");
+    }
+    function switchMode2() {
+      switchMode(mode === "login" ? "register" : "login");
+    }
+
+    function clearErrors() {
+      document.querySelectorAll(".err-msg").forEach(e => { e.classList.remove("show"); e.textContent = ""; });
+      document.querySelectorAll(".input-group input").forEach(i => i.classList.remove("input-error"));
+    }
+    function setErr(id, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.classList.add("show");
+      el.previousElementSibling.classList.add("input-error");
+    }
+
+    function doAuth() {
+      clearErrors();
+      const mobile = document.getElementById("auth-mobile").value.trim();
+      const password = document.getElementById("auth-password").value;
+      const name = document.getElementById("reg-name").value.trim();
+      let ok = true;
+      if (!validMobile(mobile)) { setErr("err-mobile", "Enter a valid 10-digit mobile number."); ok = false; }
+      if (!validPassword(password)) { setErr("err-password", "Password must be at least 4 characters."); ok = false; }
+      if (mode === "register" && !name) { setErr("err-name", "Enter the farmer name."); document.getElementById("group-name").querySelector("input").classList.add("input-error"); ok = false; }
+      if (!ok) return;
+
+      if (mode === "register") {
+        const r = Auth.register({ name, mobile, password });
+        if (!r.ok) { setErr("err-mobile", "This mobile number is already registered."); return; }
+        showToast(Lang.key("register_success"));
+        switchMode("login");
+        document.getElementById("auth-mobile").value = mobile;
+        return;
+      }
+
+      const r = Auth.login(mobile, password, document.getElementById("remember").checked);
+      if (!r.ok) {
+        setErr("err-mobile", Lang.key("auth_failed"));
+        return;
+      }
+      location.href = "dashboard.html";
+    }
+
+    document.getElementById("toggle-pw").addEventListener("click", () => {
+      const btn = document.getElementById("toggle-pw");
+      const inp = document.getElementById("auth-password");
+      const show = inp.type === "password";
+      inp.type = show ? "text" : "password";
+      btn.classList.toggle("sw", show);
+      btn.setAttribute("aria-label", show ? "Hide password" : "Show password");
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      Lang.onReady();
+      switchMode("login");
+      const savedMobile = localStorage.getItem("AI-Driven Precision Agrochemical Sprayer_last_mobile");
+      if (document.getElementById("remember").checked && savedMobile) {
+        document.getElementById("auth-mobile").value = savedMobile;
+      }
+    });
+
+    async function showToast(msg) {
+      let t = document.createElement("div");
+      t.className = "toast show";
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 2500);
+    }
+  </script>
+</body>
+</html>

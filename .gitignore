@@ -1,0 +1,87 @@
+# ============================================================
+# AI-Driven Precision Agrochemical Sprayer - .gitignore
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# ---------- Virtual environments ----------
+venv/
+env/
+.env/
+.venv/
+ENV/
+venv.bak/
+env.bak/
+
+# ---------- Node / frontend ----------
+node_modules/
+bower_components/
+*.min.js.map
+
+# ---------- Environment / secrets ----------
+.env
+.env.local
+.env.*.local
+!.env.example
+*.pem
+*.key
+
+# ---------- Logs ----------
+logs/
+*.log
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------- Datasets (large image sets - do NOT commit) ----------
+datasets/
+dataset/
+training_data/
+!datasets/README.md
+
+# ---------- Trained model binaries (large - train/download instead) ----------
+*.keras
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+*.pbtxt
+*.pdmodel
+models/plant_disease_model.*
+models/**/*.keras
+models/**/*.h5
+
+# ---------- Runtime uploads / user data ----------
+uploads/
+!uploads/.gitkeep
+
+# ---------- Test client images (optional large files) ----------
+# small sample test images are kept; add more here if you add large ones
+
+# ---------- 3rd-party downloaded binaries ----------
+tools/
+nssm.exe
+
+# ---------- Machine-specific 24/7 hosting helper ----------
+# setup_24x7.ps1 registers a Windows Scheduled Task with an absolute path
+# on the machine where it runs; it is machine-specific and not needed in repo.
+setup_24x7.ps1

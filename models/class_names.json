@@ -1,0 +1,330 @@
+{
+  "0": {
+    "folder_name": "Apple_apple_scab",
+    "crop": "Apple",
+    "display_name": "Apple Scab",
+    "disease": "Apple Scab",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "1": {
+    "folder_name": "Apple_black_rot",
+    "crop": "Apple",
+    "display_name": "Apple Black Rot",
+    "disease": "Black Rot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "2": {
+    "folder_name": "Apple_cedar_apple_rust",
+    "crop": "Apple",
+    "display_name": "Cedar Apple Rust",
+    "disease": "Cedar Apple Rust",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "3": {
+    "folder_name": "Apple_healthy",
+    "crop": "Apple",
+    "display_name": "Apple Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "4": {
+    "folder_name": "Blueberry_healthy",
+    "crop": "Blueberry",
+    "display_name": "Blueberry Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "5": {
+    "folder_name": "Cherry_healthy",
+    "crop": "Cherry",
+    "display_name": "Cherry Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "6": {
+    "folder_name": "Cherry_powdery_mildew",
+    "crop": "Cherry",
+    "display_name": "Cherry Powdery Mildew",
+    "disease": "Powdery Mildew",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "7": {
+    "folder_name": "Grape_black_rot",
+    "crop": "Grape",
+    "display_name": "Grape Black Rot",
+    "disease": "Black Rot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "8": {
+    "folder_name": "Grape_esca_black_measles",
+    "crop": "Grape",
+    "display_name": "Grape Esca Black Measles",
+    "disease": "Esca Black Measles",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "9": {
+    "folder_name": "Grape_healthy",
+    "crop": "Grape",
+    "display_name": "Grape Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "10": {
+    "folder_name": "Grape_leaf_blight_isariopsis_leaf_spot",
+    "crop": "Grape",
+    "display_name": "Grape Leaf Blight Isariopsis Leaf Spot",
+    "disease": "Leaf Blight Isariopsis Leaf Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "11": {
+    "folder_name": "Maize_cercospora_leaf_spot_gray_leaf_spot",
+    "crop": "Maize",
+    "display_name": "Maize Cercospora Leaf Spot Gray Leaf Spot",
+    "disease": "Cercospora Leaf Spot Gray Leaf Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "12": {
+    "folder_name": "Maize_common_rust",
+    "crop": "Maize",
+    "display_name": "Maize Common Rust",
+    "disease": "Common Rust",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "13": {
+    "folder_name": "Maize_healthy",
+    "crop": "Maize",
+    "display_name": "Maize Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "14": {
+    "folder_name": "Maize_northern_leaf_blight",
+    "crop": "Maize",
+    "display_name": "Maize Northern Leaf Blight",
+    "disease": "Northern Leaf Blight",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "15": {
+    "folder_name": "Orange_haunglongbing_citrus_greening",
+    "crop": "Orange",
+    "display_name": "Orange Haunglongbing Citrus Greening",
+    "disease": "Haunglongbing Citrus Greening",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "16": {
+    "folder_name": "Peach_bacterial_spot",
+    "crop": "Peach",
+    "display_name": "Peach Bacterial Spot",
+    "disease": "Bacterial Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "17": {
+    "folder_name": "Peach_healthy",
+    "crop": "Peach",
+    "display_name": "Peach Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "18": {
+    "folder_name": "Pepper_bacterial_spot",
+    "crop": "Pepper",
+    "display_name": "Pepper Bacterial Spot",
+    "disease": "Bacterial Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "19": {
+    "folder_name": "Pepper_healthy",
+    "crop": "Pepper",
+    "display_name": "Pepper Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "20": {
+    "folder_name": "Potato_early_blight",
+    "crop": "Potato",
+    "display_name": "Potato Early Blight",
+    "disease": "Early Blight",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "21": {
+    "folder_name": "Potato_healthy",
+    "crop": "Potato",
+    "display_name": "Potato Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "22": {
+    "folder_name": "Potato_late_blight",
+    "crop": "Potato",
+    "display_name": "Potato Late Blight",
+    "disease": "Late Blight",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "23": {
+    "folder_name": "Raspberry_healthy",
+    "crop": "Raspberry",
+    "display_name": "Raspberry Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "24": {
+    "folder_name": "Rice_bacterial_leaf_blight",
+    "crop": "Rice",
+    "display_name": "Rice Bacterial Leaf Blight",
+    "disease": "Bacterial Leaf Blight",
+    "status": "Diseased",
+    "source": "Rice"
+  },
+  "25": {
+    "folder_name": "Rice_brown_spot",
+    "crop": "Rice",
+    "display_name": "Rice Brown Spot",
+    "disease": "Brown Spot",
+    "status": "Diseased",
+    "source": "Rice"
+  },
+  "26": {
+    "folder_name": "Rice_leaf_smut",
+    "crop": "Rice",
+    "display_name": "Rice Leaf Smut",
+    "disease": "Leaf Smut",
+    "status": "Diseased",
+    "source": "Rice"
+  },
+  "27": {
+    "folder_name": "Soybean_healthy",
+    "crop": "Soybean",
+    "display_name": "Soybean Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "28": {
+    "folder_name": "Squash_powdery_mildew",
+    "crop": "Squash",
+    "display_name": "Squash Powdery Mildew",
+    "disease": "Powdery Mildew",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "29": {
+    "folder_name": "Strawberry_healthy",
+    "crop": "Strawberry",
+    "display_name": "Strawberry Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "30": {
+    "folder_name": "Strawberry_leaf_scorch",
+    "crop": "Strawberry",
+    "display_name": "Strawberry Leaf Scorch",
+    "disease": "Leaf Scorch",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "31": {
+    "folder_name": "Tomato_bacterial_spot",
+    "crop": "Tomato",
+    "display_name": "Tomato Bacterial Spot",
+    "disease": "Bacterial Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "32": {
+    "folder_name": "Tomato_early_blight",
+    "crop": "Tomato",
+    "display_name": "Tomato Early Blight",
+    "disease": "Early Blight",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "33": {
+    "folder_name": "Tomato_healthy",
+    "crop": "Tomato",
+    "display_name": "Tomato Healthy",
+    "disease": null,
+    "status": "Healthy",
+    "source": "PlantVillage"
+  },
+  "34": {
+    "folder_name": "Tomato_late_blight",
+    "crop": "Tomato",
+    "display_name": "Tomato Late Blight",
+    "disease": "Late Blight",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "35": {
+    "folder_name": "Tomato_leaf_mold",
+    "crop": "Tomato",
+    "display_name": "Tomato Leaf Mold",
+    "disease": "Leaf Mold",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "36": {
+    "folder_name": "Tomato_septoria_leaf_spot",
+    "crop": "Tomato",
+    "display_name": "Tomato Septoria Leaf Spot",
+    "disease": "Septoria Leaf Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "37": {
+    "folder_name": "Tomato_spider_mites_two_spotted_spider_mite",
+    "crop": "Tomato",
+    "display_name": "Tomato Spider Mites Two Spotted Spider Mite",
+    "disease": "Spider Mites Two Spotted Spider Mite",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "38": {
+    "folder_name": "Tomato_target_spot",
+    "crop": "Tomato",
+    "display_name": "Tomato Target Spot",
+    "disease": "Target Spot",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "39": {
+    "folder_name": "Tomato_tomato_mosaic_virus",
+    "crop": "Tomato",
+    "display_name": "Tomato Mosaic Virus",
+    "disease": "Tomato Mosaic Virus",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  },
+  "40": {
+    "folder_name": "Tomato_tomato_yellow_leaf_curl_virus",
+    "crop": "Tomato",
+    "display_name": "Tomato Yellow Leaf Curl Virus",
+    "disease": "Tomato Yellow Leaf Curl Virus",
+    "status": "Diseased",
+    "source": "PlantVillage"
+  }
+}

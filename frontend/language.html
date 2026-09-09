@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1e7e34">
+  <title>AI-Driven Precision Agrochemical Sprayer - Language</title>
+  <link rel="stylesheet" href="css/style.css?v=7\">
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="auth-brand">
+      <div class="big-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+      <h1 data-i18n="app_name">AI-Driven Precision Agrochemical Sprayer</h1>
+      <p class="muted" data-i18n="tagline">AI-Driven Precision Agriculture</p>
+    </div>
+
+    <h2 style="text-align:center;margin:18px 0;" data-i18n="choose_language">Choose Language</h2>
+
+    <button class="lang-btn" onclick="selectLang('en')">
+      <span><span class="flag">🇬🇧</span> <span data-i18n="english">English</span></span>
+      <span class="check" id="check-en">✓</span>
+    </button>
+
+    <button class="lang-btn" onclick="selectLang('hi')">
+      <span><span class="flag">🇮🇳</span> हिंदी</span>
+      <span class="check" id="check-hi">✓</span>
+    </button>
+
+    <button class="lang-btn" onclick="selectLang('mr')">
+      <span><span class="flag">🇮🇳</span> मराठी</span>
+      <span class="check" id="check-mr">✓</span>
+    </button>
+
+    <div style="margin-top:26px;">
+      <button id="btn-next" class="btn btn-primary" onclick="goNext()" data-i18n="login">Login</button>
+    </div>
+  </div>
+
+  <script src="js/language.js?v=7"></script>
+  <script>
+    const flagMap = { en: "🇬🇧", hi: "🇮🇳", mr: "🇮🇳" };
+    function markSelected(lang) {
+      document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("selected"));
+      document.querySelectorAll(".check").forEach(c => c.style.display = "none");
+      document.querySelector(`#check-${lang}`).style.display = "inline";
+      if (document.getElementById(`tb-${lang}`)) {
+        document.getElementById(`tb-${lang}`).classList.add("selected");
+      } else {
+        const btn = document.querySelector(`.lang-btn[onclick="selectLang('${lang}')"]`);
+        if (btn) btn.classList.add("selected");
+      }
+    }
+    function selectLang(lang) {
+      Lang.set(lang);
+      Lang.apply();
+      markSelected(lang);
+      document.getElementById("btn-next").textContent = Lang.key("login");
+      document.getElementById("btn-next").setAttribute("data-i18n", "login");
+      Lang.apply(document.getElementById("btn-next") ? document : document);
+    }
+    function goNext() {
+      location.href = "login.html";
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      Lang.onReady();
+      markSelected(Lang.current);
+    });
+  </script>
+</body>
+</html>

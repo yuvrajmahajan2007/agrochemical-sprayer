@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1e7e34">
+  <title>AI-Driven Precision Agrochemical Sprayer - Settings</title>
+  <link rel="stylesheet" href="css/style.css?v=7\">
+</head>
+<body>
+  <div class="appbar">
+    <div>
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span data-i18n="settings">Settings</span></div>
+      <div class="sub" data-i18n="tagline">AI-Driven Precision Agriculture</div>
+    </div>
+    <div class="right">
+      <button class="ghost" onclick="location.href='dashboard.html'" data-i18n="back">Back</button>
+    </div>
+  </div>
+
+  <!-- Language -->
+  <div class="card">
+    <div class="card-title">🌐 <span data-i18n="change_language">Change Language</span></div>
+    <div class="row">
+      <button class="btn btn-sm lang-select" data-lang="en">🇬🇧 <span data-i18n="english">English</span></button>
+      <button class="btn btn-sm lang-select" data-lang="hi">🇮🇳 हिंदी</button>
+      <button class="btn btn-sm lang-select" data-lang="mr">🇮🇳 मराठी</button>
+    </div>
+  </div>
+
+  <!-- Notifications -->
+  <div class="card">
+    <div class="card-title">🔔 <span data-i18n="notifications">Notification Settings</span></div>
+    <label style="display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;">
+      <span data-i18n="notifications_enable">Enable notifications</span>
+      <input type="checkbox" id="notif-toggle" style="width:auto;">
+    </label>
+  </div>
+
+  <!-- Profile -->
+  <div class="card">
+    <div class="card-title">👤 <span data-i18n="profile">Profile</span></div>
+    <div class="input-group">
+      <label data-i18n="farmer_name">Farmer Name</label>
+      <input type="text" id="profile-name">
+    </div>
+    <div class="input-group">
+      <label data-i18n="mobile_number">Mobile Number</label>
+      <input type="tel" id="profile-mobile" maxlength="10" inputmode="numeric">
+    </div>
+    <button class="btn btn-primary btn-sm" onclick="saveProfile()" data-i18n="save">Save</button>
+  </div>
+
+  <!-- AI Model Status -->
+  <div class="card">
+    <div class="card-title">🧠 <span data-i18n="ai_model_status">AI Model Status</span></div>
+    <div id="ai-status-line" class="muted">...</div>
+  </div>
+
+  <!-- Backend URL -->
+  <div class="card">
+    <div class="card-title">🌐 <span data-i18n="backend_url">Backend API URL</span></div>
+    <div class="input-group">
+      <label data-i18n="backend_url">Backend API URL</label>
+      <input type="text" id="backend-url" data-i18n-placeholder="backend_url_placeholder" placeholder="http://192.168.1.100:5000">
+      <p class="muted">http://&lt;laptop-ip&gt;:5000</p>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary btn-sm" onclick="saveBackendUrl()" data-i18n="save">Save</button>
+      <button class="btn btn-outline btn-sm" onclick="testBackendUrl()" data-i18n="backend_test">Test Connection</button>
+    </div>
+    <p class="muted" id="backend-status" style="margin-top:8px;"></p>
+  </div>
+
+<!-- AI pipeline thresholds -->
+  <div class="card">
+    <div class="card-title">📊 <span data-i18n="confidence_threshold">Confidence Threshold</span></div>
+    <div class="input-group">
+      <p class="muted" data-i18n="threshold_hint">Below the gate the pipeline stops honestly (Low Plant Confidence / Analysis Not Available) - it never guesses a result.</p>
+      <div id="system-thresholds" class="muted" style="margin-top:8px;">Loading...</div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- Clear history -->
+  <div class="card">
+    <div class="card-title">🗑 <span data-i18n="clear_scan_history">Clear Scan History</span></div>
+    <button class="btn btn-danger btn-sm" onclick="clearHistory()" data-i18n="clear_history">Clear History</button>
+  </div>
+
+  <!-- Logout -->
+  <div style="padding:12px 16px;">
+    <button class="btn btn-outline" onclick="logout()" data-i18n="logout">Logout</button>
+  </div>
+
+  <div class="footer-note">
+    <span data-i18n="_footer">AI-Driven Precision Agrochemical Sprayer - Engineering Project | ESP32-CAM rover ready</span>
+  </div>
+
+  <nav class="bottomnav">
+    <a class="nav-item" data-page="dashboard" href="dashboard.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span><span data-i18n="dashboard">Dashboard</span></a>
+    <a class="nav-item" data-page="scan" href="scanner.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3.5"/></svg></span><span data-i18n="scan">Scan</span></a>
+    <a class="nav-item" data-page="history" href="history.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v6h6"/><path d="M3.5 9A9 9 0 1 1 4 15"/><path d="M12 7v5l3.5 2"/></svg></span><span data-i18n="history">History</span></a>
+    <a class="nav-item" data-page="analytics" href="analytics.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="13"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="18" y1="20" x2="18" y2="10"/><line x1="3" y1="20" x2="21" y2="20"/></svg></span><span data-i18n="analytics">Analytics</span></a>
+    <a class="nav-item active" data-page="settings" href="settings.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/></svg></span><span data-i18n="settings">Settings</span></a>
+  </nav>
+
+  <script src="js/language.js?v=7"></script>
+  <script src="js/auth.js?v=7"></script>
+  <script src="js/app.js?v=7"></script>
+  <script src="js/api.js?v=7"></script>
+  <script>
+    async function initSettings() {
+      if (!requireAuth()) return;
+      initNav("settings");
+
+      // language buttons
+      document.querySelectorAll(".lang-select").forEach(b => {
+        b.classList.toggle("selected", b.dataset.lang === Lang.current);
+        b.addEventListener("click", () => {
+          Lang.set(b.dataset.lang);
+          Lang.apply();
+          document.querySelectorAll(".lang-select").forEach(x => x.classList.toggle("selected", x.dataset.lang === Lang.current));
+        });
+      });
+
+      // notifications toggle
+      const ntf = document.getElementById("notif-toggle");
+      ntf.checked = SettingsStore.notifications;
+      ntf.addEventListener("change", () => {
+        SettingsStore.setNotifications(ntf.checked);
+        showToast(Lang.key(ntf.checked ? "notifications_enabled" : "notifications_disabled"));
+      });
+
+      // profile
+      const user = Auth.currentUser();
+      if (user) {
+        document.getElementById("profile-name").value = user.name;
+        document.getElementById("profile-mobile").value = user.mobile;
+      }
+
+      // backend url (show saved override; otherwise the auto-detected LAN URL)
+      document.getElementById("backend-url").value =
+        Api.savedUrl || await Api.getBackendUrl();
+
+// system thresholds (read-only, from backend pipeline)
+      const th = document.getElementById("system-thresholds");
+      if (th) {
+        try {
+          const s = await Api.status();
+          const rows = [
+            ["Plant / Leaf Validation", s.plant_threshold + "%"],
+            ["Severity LOW (0% - up to)", s.severity_low_max + "%"],
+            ["Severity MEDIUM (up to)", s.severity_med_max + "%"],
+            ["Severity HIGH (above)", s.severity_med_max + "%"],
+            ["Spray Decision (Healthy/Low)", "MONITOR"],
+            ["Spray Decision (Medium)", "INSPECTION RECOMMENDED"],
+            ["Spray Decision (High)", "TREATMENT ASSESSMENT RECOMMENDED"],
+          ].map(r => `<div class="pipeline-row"><span>${r[0]}</span><span class="muted">${r[1]}</span></div>`).join("");
+          th.innerHTML = rows;
+        } catch (e) {
+          th.innerHTML = Lang.key("network_error");
+        }
+      }
+
+      // AI model status
+      const statusLine = document.getElementById("ai-status-line");
+      try {
+        const s = await Api.status();
+        if (s.segmenter_loaded != null) {
+          const sourceName = (s.segmentation_source === "model")
+            ? "health segmentation U-Net" : "deterministic pixel fallback";
+          statusLine.innerHTML = `<span class="status-dot ok"></span>${Lang.key("ai_status_loaded")} · ${sourceName} (${s.seg_image_size}x${s.seg_image_size})`;
+        } else {
+          statusLine.textContent = s.message || "error";
+        }
+      } catch (e) {
+        statusLine.textContent = Lang.key("network_error");
+      }
+    }
+
+    function saveProfile() {
+      const name = document.getElementById("profile-name").value.trim();
+      const mobile = document.getElementById("profile-mobile").value.trim();
+      if (!name) { showToast(Lang.key("error")); return; }
+      Auth.updateProfile({ name, mobile: mobile || null });
+      showToast(Lang.key("profile_saved"));
+    }
+
+    function saveBackendUrl() {
+      const url = document.getElementById("backend-url").value.trim();
+      if (!url) return;
+      Api.setBackendUrl(url);
+      showToast(Lang.key("backend_saved"));
+    }
+
+    async function testBackendUrl() {
+      const status = document.getElementById("backend-status");
+      status.textContent = Lang.key("loading");
+      const r = await testBackend();
+      status.innerHTML = r.ok
+        ? `<span class="status-dot ok"></span>${Lang.key("ai_status_loaded")} (${r.data.num_classes} classes)`
+        : Lang.key("network_error");
+    }
+
+    function clearHistory() {
+      if (confirm(Lang.key("clear_confirm"))) {
+        HistoryStore.clear();
+        showToast("OK");
+      }
+    }
+
+    function logout() {
+      Auth.logout();
+      location.href = "login.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", initSettings);
+  </script>
+</body>
+</html>
